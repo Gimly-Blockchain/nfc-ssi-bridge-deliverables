@@ -1,6 +1,7 @@
-Deliverables
-============
+# SSI-NFC Bridge
 
-Use this repo to store formal documents requested by eSSIF.
+## Interfaces
 
-Please begin by filling out the templates included in the repo.
+[Interfaces overview](./interfaces/overview.md)
+
+## Function specification
