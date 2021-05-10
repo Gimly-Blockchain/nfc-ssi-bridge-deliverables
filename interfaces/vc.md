@@ -1,7 +1,7 @@
 # Verifiable Credentials Sdk Interface
 
 
-```json
+```js
 /** 
 * Issues a VC signed by the NFC device
 * 

@@ -1,6 +1,6 @@
 # DID Sdk Interface
 
-```json
+```js
 /** 
 * Resolves a DID to a DID Document and verifies the DID Document contains a key which can be signed by the presented NFC device
 * 

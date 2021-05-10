@@ -18,11 +18,13 @@ This will sign a string or a json object, using the private key of the NFC devic
 
 If the input is a string, the NFC device will sign a SHA256 hash of this string. If the input is an object, this will be converted into a JSON string and the NFC device will sign a SHA256 hash of this string.
 
-Note: If a hash wishes to be signed, they should directly use the React Native Tangem SDK.
+## SignHash
+This will sign a hash, using the private key of the NFC device.
 
 ## Get Public Key
 The public key on the NFC device will be fetched. This may require user input of the PIN or other security options. If requested, the public key will be verified by checking that the card presents a signature of a provided random challenge, which takes a bit more time.
 
 ## Not in scope
 Configuration of the NFC  device is not supported by the library. This should be done directly using the React Native Tangem SDK’s wallet functions.
-DID create, update and deactivate operations  are not directly supported by the library. This is because each DID method has a different mechanism for these operations. The library provides the sign() and getPublicKey() functions to allow for these DID operations to be implemented in their respective DID method implementations if needed. An example application will demostrate how to implement DID create for reference.
+
+To ensure the library is fully DID method independant, DID create, update and deactivate operations are not directly supported by the library. This is because each DID method has a different mechanism for these operations. The library provides the `sign()`, `signHash()` and `getPublicKey()` functions to allow for these DID operations to be implemented in their respective DID method implementations if needed. An example application will demostrate how to implement DID create for reference.

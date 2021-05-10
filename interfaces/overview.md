@@ -10,7 +10,16 @@ The [typescript](https://www.typescriptlang.org) type files show tightly coupled
 This can be best viewed in most modern IDE such as Atom or Visual Studio which linked types to other packages such as vc-js and tangem-sdk-react-native can be inspected. Or it can be viewed in Gitlab.
 
 ## Markdown
-A copy of the interface descriptions made using [JSDoc](https://jsdoc.app) can be found here in gitlab for convenience.  this can be viewed in the following files:
+A copy of the interface descriptions made using [JSDoc](https://jsdoc.app) can be found here in gitlab for convenience. This can be viewed in the following files:
+
+[JSDoc](https://jsdoc.app) has the following format and syntax:
+```js
+/** 
+* Description of function
+* 
+* @param {ParameterType} [parameterName = optionalDefaultValue] - Description of parameter. [] is an optional parameter.
+* @return {ReturnType} - The return value and type, and a description of what is returned
+```
 
 - [did.md](./did.md)
 - [vc.md](./vc.md)

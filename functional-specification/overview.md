@@ -1,35 +1,28 @@
 # Functional overview
-The SSI-NFC bridge  consists of two toolsets. These tool sets allow developers to use SSI components that are cryptographically signed or bound to the NFC device, as explained below.
+The SSI-NFC bridge consists of an SDK that allow developers to use SSI components that are cryptographically signed or bound to the NFC device, as explained below.
 
-## 1. Software development kit (SDK)
-This is a react native SDK  which allows developers to build SSI  applications using the features of the NFC devices. There are three planned libraries to support DIDs, verifiable credentials and verifiable presentations.  These libraries will make  the use of the React Native Tangem SDK and create the abstraction layers on top of this to facilitate easy-to-build SSI applications that take advantage of the secure Tangem NFC devices.
+## React Native SSI-NFC software development kit (SDK)
+This is a react native SDK which allows developers to build SSI  applications using the features of the NFC devices. There are three planned libraries to support DIDs, verifiable credentials and verifiable presentations.  These libraries will make  the use of the React Native Tangem SDK and create the abstraction layers on top of this to facilitate easy-to-build SSI applications that take advantage of the secure Tangem NFC devices.
 
 Support for additional SSI components can be added. DIDComm may be supported in the future if sufficient interest is shown.
 
 ### Architecture
 ![Architecture](./architecture.png)
 
-As seen in the architecture diagram, the NFC-SSI bridge SDK will use the React Native Tangem SDK to communicate with the Tangem device using the NFC transport protocol. The Tangem device stores a private key, which can be used to digitally sign transactions.
+As seen in the architecture diagram, the NFC-SSI bridge SDK will use the React Native Tangem SDK to communicate with the Tangem device using the NFC transport protocol. The Tangem device stores a private key, which can be used to digitally sign transactions. The device can then be used to create DIDs, sign verifiable credentials, verifiable presentations and more.
+
+The DID module will be fully DID method independant. Any blockdhain or verification registry can be used with this SDK.
 
 See
 - [did.md](./did.md)
 - [vc.md](./vc.md)
 - [vp.md](./vp.md)
 
-### User interface
-To facilitate the testing an understanding of the SDK,  we aim to create a simple React Native  application that displays the core functionalities of these libraries.  the user stories of this application can be found here:
-<br>
-[user-stories.md](./user-stories.md)
-
-## 2. Command line interface (CLI)
-This is a nodejs package, to be installed locally by developers with a small amount of functions to assist in initialisation and configuration of their React Native project. Their project will then be able to immediately use the Tangem and SSI-NFC bridge SDKs.
-
-This is an optional component, provided for developer convenience so that they do not have to install all the dependencies for using Tangem NFC devices manually, which can be difficult.
-
-See
-- [cli.md](./cli.md)
+To communicate with NFC devices through an NFC reader on desktop, the SDK will connect via a local http connection to a locally installed application which will relay the request to the NFC device and back. This thin relay app will host an http server and convert requests to NFC requests using the Tangem Java SDK.
 
 ## Support
 The SSI-NFC bridge will support React Native projects, with the same prerequisites as React Native to use.
 
-Additionally, phones will need to have an NFC reader to be able to use these libraries. Desktop clients will need to have an inbuilt or USB NFC reader.
+Additionally:
+- Mobile devices will need to have an NFC reader to be able to use these libraries.
+- Desktop clients will need to have an inbuilt or USB NFC reader and the Web desktop relay software installed.

@@ -1,6 +1,6 @@
 # Verifiable Presentations Sdk Interface
 
-```json
+```js
 /** 
 * Issues a VP signed by the NFC device
 * 
