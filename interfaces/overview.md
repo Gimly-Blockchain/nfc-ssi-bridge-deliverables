@@ -14,9 +14,9 @@ A copy of the interface descriptions made using [JSDoc](https://jsdoc.app) can b
 
 [JSDoc](https://jsdoc.app) has the following format and syntax:
 ```js
-/** 
+/**
 * Description of function
-* 
+*
 * @param {ParameterType} [parameterName = optionalDefaultValue] - Description of parameter. [] is an optional parameter.
 * @return {ReturnType} - The return value and type, and a description of what is returned
 ```
@@ -24,4 +24,4 @@ A copy of the interface descriptions made using [JSDoc](https://jsdoc.app) can b
 - [did.md](./did.md)
 - [vc.md](./vc.md)
 - [vp.md](vp.md)
-- [cli.md](cli.md)
+- [cli.md](cli.md) // Did we exclude this?

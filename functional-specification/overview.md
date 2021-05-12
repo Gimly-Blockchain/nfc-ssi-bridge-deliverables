@@ -19,6 +19,10 @@ See
 - [vp.md](./vp.md)
 
 To communicate with NFC devices through an NFC reader on desktop, the SDK will connect via a local http connection to a locally installed application which will relay the request to the NFC device and back. This thin relay app will host an http server and convert requests to NFC requests using the Tangem Java SDK.
+/* Are the e2e encryption options relevant to mention here? That the communication between the
+* NFC card and endpoint are fully secure? I think this was discussed with Andrey?
+* /
+
 
 ## Support
 The SSI-NFC bridge will support React Native projects, with the same prerequisites as React Native to use.
