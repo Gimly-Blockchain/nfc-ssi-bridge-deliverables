@@ -24,4 +24,3 @@ A copy of the interface descriptions made using [JSDoc](https://jsdoc.app) can b
 - [did.md](./did.md)
 - [vc.md](./vc.md)
 - [vp.md](vp.md)
-- [cli.md](cli.md) // Did we exclude this?

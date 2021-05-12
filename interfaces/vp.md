@@ -10,6 +10,3 @@
 */
 create(vp: VerifiablePresentationUnsigned, options?: OptionsCommon): Promise<VerifiablePresentation>
 ```
-**/
-*Where is the VP presented?
-/*

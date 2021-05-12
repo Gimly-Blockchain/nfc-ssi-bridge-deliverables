@@ -17,11 +17,6 @@ This will store a VC as a file on the NFC device. This file can be public meanin
 
 ## Read a VC file
 This will read a specific VC for a given ID from the NFC device. If the file is private then a correct PIN must be presented.
-/* I believe the way the demo works now is that only visible/public VC files are shown when tapping
-* the card and private files are not shown – and there is no PIN asked. This is how a holder can
-* manage which credentials to show or not. But in this case, perhaps you are thinking about a use case
-* where a verifier requests a specific VC which may be protected by pin?
-* /
 
 ## Remove a VC file
 This will remove a specific VC for a given ID from the NFC device. If the file is private then a correct PIN must be presented.
